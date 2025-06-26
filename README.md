@@ -14,3 +14,4 @@ Download official Lua releases from [Lua.org](https://www.lua.org/download.html)
 - No debug: 274k
 - No coroutine: 270k
 - No package: 265k
+- Secure env: 260k
