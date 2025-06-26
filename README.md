@@ -11,3 +11,4 @@ Download official Lua releases from [Lua.org](https://www.lua.org/download.html)
 - Original: 302k
 - No os: 297k
 - No io: 283k
+- No debug: 274k
