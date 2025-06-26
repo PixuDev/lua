@@ -37,18 +37,12 @@ setmetatable(m, {
 })
 assert(m.abc == "hi:abc", "[FAIL] metatable")
 
--- test load + sandbox
-local code = "return 1 + 2 * 3"
-local fn, err = load(code, "test", "t", {})
-assert(fn, "[FAIL] load() failed: " .. tostring(err))
-assert(fn() == 7, "[FAIL] load() result wrong")
-
 -- test pcall
 local ok, err = pcall(function() error("oops") end)
 assert(ok == false and string.find(err, "oops"), "[FAIL] pcall did not catch error")
 
 -- test sandboxed globals
-local blocked = {"os", "io", "debug", "coroutine", "require"}
+local blocked = {"os", "io", "debug", "coroutine", "require", "loadfile", "dofile", "load", "load_file", "collectgarbage"}
 for _, name in ipairs(blocked) do
   if _G[name] ~= nil then
     print("[FAIL] dangerous global not removed: " .. name)
