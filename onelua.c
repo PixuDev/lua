@@ -99,7 +99,6 @@
 #ifndef MAKE_LUAC
 #include "lbaselib.c"
 #include "lmathlib.c"
-#include "loadlib.c"
 #include "lstrlib.c"
 #include "ltablib.c"
 #include "lutf8lib.c"
