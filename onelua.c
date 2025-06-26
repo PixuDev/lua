@@ -98,7 +98,6 @@
 /* standard library  -- not used by luac */
 #ifndef MAKE_LUAC
 #include "lbaselib.c"
-#include "lcorolib.c"
 #include "lmathlib.c"
 #include "loadlib.c"
 #include "lstrlib.c"
